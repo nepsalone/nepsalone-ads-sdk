@@ -1,12 +1,12 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.library'id 'maven-publish
 }
 
 android {
-    compileSdk 31
+    compileSdk 30
     defaultConfig {
         minSdk 21
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0.0"
         consumerProguardFiles "consumer-rules.pro"
