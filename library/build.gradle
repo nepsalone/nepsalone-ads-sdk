@@ -61,7 +61,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.nepsalone'
             artifactId = 'nepsalone-ads-sdk'
-            version = '1.0.2'
+            version = '1.0.0'
 
             afterEvaluate {
                 from components.release
