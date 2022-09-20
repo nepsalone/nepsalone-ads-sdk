@@ -56,3 +56,16 @@ android {
         }
     }
 }
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.nepsalone'
+            artifactId = 'nepsalone-ads-sdk'
+            version = '1.0.2'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+}
