@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 32
     defaultConfig {
         minSdk 21
-        targetSdk 31
+        targetSdk 32
         versionCode 1
         versionName "1.0.0"
         consumerProguardFiles "consumer-rules.pro"
@@ -49,16 +49,10 @@ dependencies {
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
 }
-afterEvaluate {
+android {
     publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-
-                groupId = 'com.github.nepsalone'
-                artifactId = 'nepsalone-ads-sdk'
-                version = '1.2'
-            }
+        singleVariant('release') {
+            withSourcesJar()
         }
     }
 }
